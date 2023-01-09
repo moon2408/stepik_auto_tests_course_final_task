@@ -12,7 +12,7 @@ class BasePage():
         self.url = url
         self.browser.implicitly_wait(timeout)
 
-    def is_element_present(self, how, what):
+    def is_element_present(self, how, what) -> object:
         try:
             self.browser.find_element(how, what)
         except (NoSuchElementException):
